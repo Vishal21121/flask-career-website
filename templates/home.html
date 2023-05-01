@@ -38,21 +38,29 @@
     }
   </style>
 <body>
+  {% include 'nav.html' %}
+  <img id="banner" class="img-fluid" src="static/cover-image.jpg">
   <div class="container" >
     <h1 class="text-center my-4">Vishal Career Solution</h1>
-    <img id="banner" class="img-fluid" src="static/cover-image.jpg">
-    <h2 class="text-center mt-2 mb-4">About</h2>
+<div class="row">
+    <div class="col-md-6">
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna et pharetra pharetra. Tincidunt lobortis feugiat vivamus at augue. Nunc mattis enim ut tellus elementum sagittis. Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Id eu nisl nunc mi ipsum. Amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Enim neque volutpat ac tincidunt vitae semper quis lectus nulla. Praesent semper feugiat nibh sed. In ornare quam viverra orci.</p>
+  </div>
+  <div class="d-none d-md-block col-md-6">
+      <img src="static/people.jpg" style="width:400px;border-radius:10px">
+  </div>  
+</div>
+    
     <h2 class="text-center mt-2 mb-4">Open positions</h2>
-   <div>
+    <div>
         {% for job in jobs %}
           {% include 'jobitem.html' %}
         {% endfor %}
     </div>
     <div class="text-center">
       <button class="btn btn-primary btn-lg">Contact us</button>
-      <p class="mt-4">Copyright, Vishal career solution</p>
     </div>
       </div>
+  {% include 'footer.html' %}
 </body>
 </html>
